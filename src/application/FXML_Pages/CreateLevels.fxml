@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AssociationsController">
+   <left>
+      <VBox fx:id="registerAssociationsLeftSpacerVBox" prefHeight="540.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="36.0" />
+            <Button fx:id="createLevelsBackBtn" mnemonicParsing="false" onAction="#createLevelsBackBtnAction" prefHeight="25.0" prefWidth="48.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="400.0" prefWidth="65.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <HBox prefHeight="400.0" prefWidth="661.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="633.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <HBox prefHeight="105.0" prefWidth="633.0">
+                     <children>
+                        <HBox prefHeight="105.0" prefWidth="627.0">
+                           <children>
+                              <Label prefHeight="64.0" prefWidth="10.0" />
+                              <Label prefHeight="64.0" prefWidth="613.0" text="ደረጃ ኮንትራክተራት ፍጠር">
+                                 <font>
+                                    <Font name="Geez Able" size="33.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="216.0" prefWidth="633.0">
+                     <children>
+                        <Label prefHeight="216.0" prefWidth="53.0" />
+                        <VBox prefHeight="216.0" prefWidth="124.0">
+                           <children>
+                              <Label prefHeight="60.0" prefWidth="188.0" text="ደረጃ ኮንትራክተር">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="183.0" />
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="256.0" prefWidth="300.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="createLevesTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="152.0" />
+                                    <Button fx:id="createRolesBtn" mnemonicParsing="false" onAction="#createLevelsButtonAction" prefHeight="52.0" prefWidth="517.0" text="ኣብ ምዝገብ ኣቀምጥ">
+                                       <font>
+                                          <Font name="Geez Able" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="633.0">
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="69.0" />
+                        <Label fx:id="createLevelsLb" prefHeight="65.0" prefWidth="563.0">
+                           <font>
+                              <Font name="Geez Able" size="15.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="createLevelsHeader" prefHeight="176.0" prefWidth="722.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="createLevelsFooter" prefHeight="40.0" prefWidth="773.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

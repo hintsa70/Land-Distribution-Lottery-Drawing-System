@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ContructorsController">
+   <left>
+      <VBox fx:id="registerAssociationsLeftSpacerVBox" prefHeight="550.0" prefWidth="205.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="35.0" />
+            <Button fx:id="manageContructorsBackBtn" mnemonicParsing="false" onAction="#manageContructorsBackBtnAction" prefHeight="25.0" prefWidth="56.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="550.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="52.0" prefWidth="221.0" style="-fx-alignment: center;" text="ብ ዙር ይኣልሹ" textAlignment="CENTER" textFill="#4fa823">
+               <font>
+                  <Font name="Geez Able" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchWinnersByRoundTf" onAction="#searchWinnersByRoundTfAction" prefHeight="45.0" prefWidth="183.0" promptText="ዙር ምዝገባ የአትው" style="-fx-background-color: #34ffff;">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Geez Able" size="15.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="399.0" prefWidth="174.0" />
+            <Button fx:id="manageContructorsPrintBtn" mnemonicParsing="false" onAction="#manageContructorsPrintBtnAction" prefHeight="36.0" prefWidth="146.0" text="ሪፖርት ኣዳልው">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font>
+            </Button>
+         </children></VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="19.0" prefWidth="860.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="157.0" />
+                  <Label prefHeight="17.0" prefWidth="588.0" text="ዝርዝር ዝተመዝገቡ ኮንትራክተራት">
+                     <font>
+                        <Font name="Geez Able" size="18.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="contructorsTable" prefHeight="600.0" prefWidth="860.0">
+               <columns>
+                  <TableColumn fx:id="contructorRowNoCol" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" sortable="false" text="ተራ ቑ" />
+                  <TableColumn fx:id="contructorNameCol" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" sortable="false" text="ሽም ኮንትራክተር" />
+                  <TableColumn fx:id="contructorPhoneCol" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" sortable="false" text="ቁፅሪ ስልኪ" />
+                  <TableColumn fx:id="contructorAddressCol" maxWidth="-1.0" minWidth="160.0" prefWidth="-1.0" sortable="false" text="ኣድራሻ" />
+                  <TableColumn fx:id="contructorRankCol" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" sortable="false" text="ደረጃ ኮንትራክተር" />
+                  <TableColumn fx:id="contructorRoundNameCol" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" sortable="false" text="ዝተመዝገበሉ ዙር" />
+               </columns>
+            </TableView>
+            <Label fx:id="editContructorsLb" prefHeight="17.0" prefWidth="671.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="86.0" />
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Button fx:id="addContructorBtn" mnemonicParsing="false" onAction="#addContructors" prefHeight="33.0" prefWidth="150.0" text="ኮንትራክተር ወስኽ">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Button fx:id="editContructorBtn" mnemonicParsing="false" onAction="#editContructors" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: blue;" text="ኮንትራክተር ኣስተኻኽል">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+                  <Label prefHeight="32.0" prefWidth="15.0" />
+                  <Button fx:id="deleteContructorBtn" mnemonicParsing="false" onAction="#deleteContructors" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: red;" text="ኮንትራክተር ሰርዝ">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="manageContructorsHeader" prefHeight="112.0" prefWidth="688.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="45.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="manageContructorsFooter" prefHeight="61.0" prefWidth="855.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

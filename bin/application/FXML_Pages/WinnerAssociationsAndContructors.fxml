@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WinnerAssociationsAndContructors">
+   <left>
+      <VBox fx:id="registerAssociationsLeftSpacerVBox" prefHeight="555.0" prefWidth="144.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="35.0" />
+            <Button fx:id="listWinnersBackBtn" mnemonicParsing="false" onAction="#listWinnersBackBtnAction" prefHeight="25.0" prefWidth="53.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="550.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="52.0" prefWidth="221.0" style="-fx-alignment: center;" text="ብ ዙር ይኣልሹ" textAlignment="CENTER" textFill="#4fa823">
+               <font>
+                  <Font name="Geez Able" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchWinnersByRoundTf" onAction="#searchWinnersByRoundTfAction" prefHeight="45.0" prefWidth="183.0" promptText="ዙር ምዝገባ የአትው" style="-fx-background-color: #34ffff;">
+               <font>
+                  <Font name="Geez Able" size="15.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextField>
+            <Label prefHeight="399.0" prefWidth="174.0" />
+            <Button fx:id="winnersPrintBtn" mnemonicParsing="false" onAction="#winnersPrintBtnAction" prefHeight="36.0" prefWidth="146.0" text="ሪፖርት ኣዳልው">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font>
+            </Button>
+         </children></VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="19.0" prefWidth="860.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="149.0" />
+                  <Label prefHeight="20.0" prefWidth="691.0" text="ዝርዝር ዕድለኛታት ማሕበር ፥ ዝበፅሖም ብሎክ ቁፅሪ ን ዝተመደበሎም ኮንትራክተርን">
+                     <font>
+                        <Font name="Geez Able" size="18.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="winnerAssociationsAndContructorsTable" prefHeight="600.0" prefWidth="500.0">
+               <columns>
+                  <TableColumn fx:id="winnersRowNoCol" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" sortable="false" text="ተራ ቑ" />
+                  <TableColumn fx:id="winnerAssociationNameCol" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" sortable="false" text=" ሽም ማሕበር" />
+                  <TableColumn fx:id="wonBlockNumberCol" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" sortable="false" text="ቁፅሪ ብሎክ" />
+                  <TableColumn fx:id="winnerContructorNameCol" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" sortable="false" style="-fx-alignment: center;" text="ሽም ኮንትራክተር" />
+                  <TableColumn fx:id="winnerContructorLevelCol" prefWidth="150.0" style="-fx-alignment: center;" text="ደረጃ ኮንትራክተር" />
+                  <TableColumn fx:id="roundNameCol" prefWidth="100.0" text="ዙር ምዝገባ" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="86.0" />
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Label prefHeight="32.0" prefWidth="15.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="listWinnersHeader" prefHeight="100.0" prefWidth="790.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="45.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="listWinnersFooter" prefHeight="40.0" prefWidth="809.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

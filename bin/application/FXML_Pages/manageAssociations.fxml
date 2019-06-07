@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AssociationsController">
+   <left>
+      <VBox fx:id="registerAssociationsLeftSpacerVBox" prefHeight="550.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="manageAssociationsBackBtn" mnemonicParsing="false" onAction="#manageAssociationsBackBtnAction" prefHeight="25.0" prefWidth="50.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="550.0" prefWidth="174.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="52.0" prefWidth="221.0" style="-fx-alignment: center;" text="ብ ዙር ይኣልሹ" textAlignment="CENTER" textFill="#4fa823">
+               <font>
+                  <Font name="Geez Able" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchWinnersByRoundTf" onAction="#searchWinnersByRoundTfAction" prefHeight="45.0" prefWidth="183.0" promptText="ዙር ምዝገባ የአትው" style="-fx-background-color: #34ffff;">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Geez Able" size="15.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="399.0" prefWidth="174.0" />
+            <Button fx:id="manageAssociationsPrintBtn" mnemonicParsing="false" onAction="#manageAssociationsPrintBtnAction" prefHeight="36.0" prefWidth="146.0" text="ሪፖርት ኣዳልው">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children></VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="78.0" prefWidth="860.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="92.0" />
+                  <Label prefHeight="26.0" prefWidth="637.0" text="ዝርዝር ዝተመዝገቡ ማሕበራት">
+                     <font>
+                        <Font name="Geez Able" size="19.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="associationsTable" prefHeight="519.0" prefWidth="780.0">
+               <columns>
+                  <TableColumn fx:id="rowNoCol" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" sortable="false" text="ተራ ቑ" />
+                  <TableColumn fx:id="associationNameCol" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" sortable="false" text="ሽም ማሕበር" />
+                  <TableColumn fx:id="registrationNumberCol" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" sortable="false" style="-fx-font-family: &quot;Geez Able&quot;;" text="ዝተመዝገበሉ ቁፅሪ" />
+                  <TableColumn fx:id="numberOfMembersCol" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" sortable="false" text="በዝሒ እባላት" />
+                  <TableColumn fx:id="numberOfRegisteredMembersCol" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" sortable="false" text="በዝሒ ዝተመዝገቡ ኣባላት" />
+                  <TableColumn fx:id="roundNameCol" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" sortable="false" text="ዝተመዝገበሉ ዙር ዕፃ" />
+               </columns>
+            </TableView>
+            <Label prefHeight="17.0" prefWidth="671.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="86.0" />
+                  <Button fx:id="addMembersBtn" mnemonicParsing="false" onAction="#addAssociationMembers" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: green;" text="ኣባላት ማሕበር መዝግብ">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Button fx:id="addAssociationBtn" mnemonicParsing="false" onAction="#addAssociations" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: green;" text="ማሕበር ወስኽ">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+                  <Label prefHeight="32.0" prefWidth="13.0" />
+                  <Button fx:id="editAssociationBtn" mnemonicParsing="false" onAction="#editAssociations" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: blue;" text="ማሕበር ኣስተኻኽል">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+                  <Label prefHeight="32.0" prefWidth="15.0" />
+                  <Button fx:id="deleteAssociationBtn" mnemonicParsing="false" onAction="#deleteAssociations" prefHeight="33.0" prefWidth="150.0" style="-fx-border-color: red;" text="ማሕበር ሰርዝ">
+                     <font>
+                        <Font name="Geez Able" size="15.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="manageAssociationsHeader" prefHeight="192.0" prefWidth="828.0" />
+            <Label />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="manageAssociationsFooter" prefHeight="215.0" prefWidth="806.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

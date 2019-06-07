@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ContructorsController">
+   <left>
+      <VBox prefHeight="550.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="38.0" />
+            <Button fx:id="registerContructorsBackBtn" mnemonicParsing="false" onAction="#registerContructorsBackBtnAction" prefHeight="25.0" prefWidth="52.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="633.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="633.0" />
+                  <HBox prefHeight="138.0" prefWidth="633.0">
+                     <children>
+                        <VBox prefHeight="131.0" prefWidth="649.0">
+                           <children>
+                              <HBox prefHeight="43.0" prefWidth="555.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="4.0" />
+                                    <Label prefHeight="19.0" prefWidth="143.0" text="ዓይነት ምዝገባ" textFill="#0c6cf2">
+                                       <font>
+                                          <Font name="Geez Able" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="registerAssociationsRb" mnemonicParsing="false" onAction="#registerAssociationsRbAction" prefHeight="17.0" prefWidth="106.0" text="ማሕበራት">
+                                       <font>
+                                          <Font name="Geez Able" size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="registerContructorsRb" mnemonicParsing="false" onAction="#registerContructorsRbAction" prefHeight="22.0" prefWidth="140.0" selected="true" text="ኮንትራክተራት">
+                                       <font>
+                                          <Font name="Geez Able" size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <ComboBox fx:id="otherRegistrationTypesCb" onAction="#otherRegistrationTypesCbAction" onMouseClicked="#otherRegistrationTypesCbSetValues" prefHeight="38.0" prefWidth="250.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="71.0" prefWidth="542.0">
+                                 <children>
+                                    <Label prefHeight="64.0" prefWidth="10.0" />
+                                    <Label prefHeight="64.0" prefWidth="304.0" text="ኮንትራክተራት መመዝገቢ">
+                                       <font>
+                                          <Font name="Geez Able" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="600.0" style="-fx-background-color: #eedddd;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="178.0" text="    ናይ ምዝገባ ዙር">
+                           <font>
+                              <Font name="Geez Able" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="registerContractorsRoundTf" prefHeight="30.0" prefWidth="312.0" style="-fx-background-color: #ddeeee; -fx-border-color: green;">
+                           <font>
+                              <Font name="Geez Able" size="21.0" />
+                           </font></TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="310.0" prefWidth="600.0">
+                     <children>
+                        <Label prefHeight="404.0" prefWidth="28.0" />
+                        <VBox prefHeight="400.0" prefWidth="150.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="159.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ሽም ኮንትራክተር">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ስልኪ ቁፅሪ">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ኣድራሻ">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ደረጃ ኮንትራክተር">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="254.0" prefWidth="312.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="404.0" />
+                              <TextField fx:id="registerContructorsCNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="registerContructorsPNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="registerContructorsAddTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <ComboBox fx:id="registerContructorsRACb" onMouseClicked="#contructorRankCbAction" prefHeight="34.0" prefWidth="312.0" promptText="ደረጃ ኮንትራክተር ይምረፁ" />
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <HBox prefHeight="46.0" prefWidth="212.0">
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="101.0" />
+                                    <Button fx:id="registreContructorsBtn" mnemonicParsing="false" onAction="#registerContructorsButtonAction" prefHeight="46.0" prefWidth="453.0" text="ኣብ መዝገብ ኣቀምጥ">
+                                       <font>
+                                          <Font name="Geez Able" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="336.0" prefWidth="112.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="600.0">
+                     <children>
+                        <Label prefHeight="43.0" prefWidth="97.0" />
+                        <Label fx:id="registerContructorsLb" prefHeight="39.0" prefWidth="505.0">
+                           <font>
+                              <Font name="Geez Able" size="15.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="registerContructorsHeader" prefHeight="189.0" prefWidth="698.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="registerContructorsFooter" prefHeight="59.0" prefWidth="697.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

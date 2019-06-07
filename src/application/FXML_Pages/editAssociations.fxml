@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AssociationsController">
+   <left>
+      <VBox fx:id="registerAssociationsLeftSpacerVBox" prefHeight="550.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="34.0" />
+            <Button fx:id="editAssociationsBackBtn" mnemonicParsing="false" onAction="#editAssociationsBackBtnAction" prefHeight="25.0" prefWidth="51.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox prefHeight="400.0" prefWidth="65.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <HBox prefHeight="400.0" prefWidth="661.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="633.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="633.0" />
+                  <HBox prefHeight="66.0" prefWidth="633.0">
+                     <children>
+                        <HBox prefHeight="66.0" prefWidth="659.0">
+                           <children>
+                              <Label prefHeight="64.0" prefWidth="10.0" />
+                              <Label prefHeight="66.0" prefWidth="605.0" text="           ናይ ማሕበራት መስተካከሊ ገፅ">
+                                 <font>
+                                    <Font name="Geez Able" size="31.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="633.0" style="-fx-background-color: #eedddd;">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="219.0" text="ናይ ምዝገባ ዙር">
+                           <font>
+                              <Font name="Geez Able" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="editAssociationsRoundTf" disable="true" prefHeight="33.0" prefWidth="297.0" style="-fx-background-color: #ddeeee; -fx-border-color: green;">
+                           <font>
+                              <Font name="Geez Able" size="21.0" />
+                           </font></TextField>
+                     </children></HBox>
+                  <HBox prefHeight="311.0" prefWidth="633.0">
+                     <children>
+                        <Label prefHeight="404.0" prefWidth="28.0" />
+                        <VBox prefHeight="400.0" prefWidth="189.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="183.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ሽም ማሕበር">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="183.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ናይ ምዝገባ ቁፅሪ">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="በዝሒ ኣባላት">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="261.0" prefWidth="300.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="305.0" />
+                              <TextField fx:id="editAssociationsANTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="editAssociationsRNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="editAssociationsNMTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <HBox prefHeight="49.0" prefWidth="300.0">
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="152.0" />
+                                    <Button fx:id="editAssociationsBtn" mnemonicParsing="false" onAction="#editAssociationsButtonAction" prefHeight="41.0" prefWidth="559.0" style="-fx-border-color: green;" text="መዝገብ ኣሀድስ">
+                                       <font>
+                                          <Font name="Geez Able" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="40.0" prefWidth="300.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="27.0" prefWidth="633.0">
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="69.0" />
+                        <Label fx:id="editAssociationsLb" prefHeight="47.0" prefWidth="563.0">
+                           <font>
+                              <Font name="Geez Able" size="15.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="editAssociationsHeader" prefHeight="210.0" prefWidth="735.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="editAssociationsFooter" prefHeight="44.0" prefWidth="815.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

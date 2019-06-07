@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HouseWinnerAssociationsController">
+   <top>
+      <VBox prefHeight="104.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="generateWinnerAssociationsHeader" prefHeight="103.0" prefWidth="640.0" />
+         </children></VBox>
+   </top>
+   <center>
+      <HBox prefHeight="424.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="1200.0" style="-fx-background-color: #ddddee; -fx-border-color: #000000; -fx-border-width: 2;">
+               <children>
+                  <HBox prefHeight="94.0" prefWidth="898.0">
+                     <children>
+                        <Label prefHeight="95.0" prefWidth="149.0">
+                           <font>
+                              <Font name="Georgia Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="102.0" prefWidth="426.0" text=" ናይ ማሕበራት ዕፃ መውፅኢ ገፅ">
+                           <font>
+                              <Font name="Geez Able" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="93.0" prefWidth="436.0" />
+                        <VBox prefHeight="93.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="197.0">
+                                 <font>
+                                    <Font name="Geez Able" size="12.0" />
+                                 </font></Label>
+                              <Button fx:id="refreshHouseLotteryBtn" mnemonicParsing="false" onAction="#refreshHouseLotteryBtnAction" prefHeight="46.0" prefWidth="180.0" style="-fx-border-color: #000000;" text="እንደገና ጀምር">
+                                 <font>
+                                    <Font name="Geez Able" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="94.0" prefWidth="898.0">
+                     <children>
+                        <Label prefHeight="78.0" prefWidth="243.0" text="    በዝሒ ብሎክ ኣእትው">
+                           <font>
+                              <Font name="Geez Able" size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="93.0" prefWidth="229.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="199.0" />
+                              <TextField fx:id="numberOfBlocksTf" prefHeight="27.0" prefWidth="186.0" style="-fx-border-color: #000000;">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                           </children>
+                        </VBox>
+                        <Label prefHeight="67.0" prefWidth="277.0" />
+                        <Label prefHeight="78.0" prefWidth="200.0" text="ዙር ምዝገባ ኣእትው">
+                           <font>
+                              <Font name="Geez Able" size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="93.0" prefWidth="229.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="199.0" />
+                              <TextField fx:id="lotteryRoundTf" prefHeight="27.0" prefWidth="186.0" style="-fx-border-color: #000000;">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="64.0" prefWidth="898.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="78.0" />
+                        <Label prefHeight="47.0" prefWidth="521.0" text="          ሽም ዕድለኛ ማሕበራት">
+                           <font>
+                              <Font name="Geez Able" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="45.0" prefWidth="134.0" />
+                        <Label prefHeight="46.0" prefWidth="336.0" text="ዝበፅሖም ቁፅሪ ብሎክ">
+                           <font>
+                              <Font name="Geez Able" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="180.0" prefWidth="446.0">
+                     <children>
+                        <Label prefHeight="129.0" prefWidth="35.0" />
+                        <Label fx:id="winnersNameLb" prefHeight="165.0" prefWidth="563.0" style="-fx-background-color: #eeefff; -fx-border-color: #000000; -fx-alignment: center;">
+                           <font>
+                              <Font name="Geez Able" size="45.0" />
+                           </font></Label>
+                        <Label prefHeight="165.0" prefWidth="39.0" />
+                        <Label fx:id="winnersBlockNumberLb" prefHeight="165.0" prefWidth="495.0" style="-fx-background-color: #eeefff; -fx-border-color: #000000; -fx-alignment: center;">
+                           <font>
+                              <Font name="Geez Able" size="125.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="898.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="40.0" />
+                        <Label fx:id="lotteryNoticeLb" prefHeight="27.0" prefWidth="616.0">
+                           <font>
+                              <Font name="Geez Able" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="57.0" prefWidth="72.0" />
+                        <Label prefHeight="27.0" prefWidth="496.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <HBox prefHeight="50.0" prefWidth="896.0">
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="160.0" />
+                        <Button fx:id="generateWinnersBtn" mnemonicParsing="false" onAction="#generateWinnersBtnAction" prefHeight="49.0" prefWidth="516.0" style="-fx-border-color: #000000;" text="ዕፃ ምውፅእ ጀምር">
+                           <font>
+                              <Font name="Geez Able" size="31.0" />
+                           </font>
+                        </Button>
+                        <Label prefHeight="106.0" prefWidth="53.0" />
+                        <Button fx:id="printHouseWinnerBtn" mnemonicParsing="false" onAction="#printHouseWinnersBtnAction" prefHeight="49.0" prefWidth="302.0" style="-fx-border-color: #000000;" text="ፕሪንት">
+                           <font>
+                              <Font name="Geez Able" size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="13.0" layoutY="237.0" prefHeight="39.0" prefWidth="896.0" />
+               </children></VBox>
+         </children>
+      </HBox>
+   </center>
+   <left>
+      <Label minWidth="100.0" prefHeight="551.0" prefWidth="128.0" BorderPane.alignment="CENTER">
+         <graphic>
+            <VBox prefHeight="551.0" prefWidth="122.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="34.0" />
+                  <Button fx:id="generateWinnerAssociationsBackBtn" mnemonicParsing="false" onAction="#generateWinnerAssociationsBackBtnAction" prefHeight="25.0" prefWidth="47.0">
+                     <font>
+                        <Font name="Geez Able" size="12.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </graphic></Label>
+   </left>
+   <bottom>
+      <HBox prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="generateHouseWinnersFooter" prefHeight="30.0" prefWidth="884.0" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

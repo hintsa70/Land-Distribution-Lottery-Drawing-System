@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AssociationsController">
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="633.0">
+               <children>
+                  <HBox prefHeight="104.0" prefWidth="633.0">
+                     <children>
+                        <HBox prefHeight="110.0" prefWidth="571.0">
+                           <children>
+                              <Label prefHeight="64.0" prefWidth="10.0" />
+                              <Label prefHeight="105.0" prefWidth="571.0" text="             ኣባላት ማሕበር መመዝገቢ">
+                                 <font>
+                                    <Font name="Geez Able" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="361.0" prefWidth="600.0">
+                     <children>
+                        <Label prefHeight="404.0" prefWidth="28.0" />
+                        <VBox prefHeight="400.0" prefWidth="150.0">
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ናይ መጀመርያ ሽም">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ናይ መወዳእታ ሽም">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="መለለዪ ቁፅሪ ኣባል">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ስልኪ ቁፅሪ">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ኣድራሻ">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font></Label>
+                              <Label prefHeight="17.0" prefWidth="191.0" />
+                              <Label prefHeight="33.0" prefWidth="188.0" text="ሓላፍነት ኣባል">
+                                 <font>
+                                    <Font name="Geez Able" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="336.0" prefWidth="300.0">
+                           <children>
+                              <TextField fx:id="registerAssociationMemberFNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="registerAssociationMemberLNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <TextField fx:id="registerAssociationMemberMIDTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <TextField fx:id="registerAssociationMemberPNTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <TextField fx:id="registerAssociationMemberAddTf" prefHeight="33.0" prefWidth="188.0">
+                                 <font>
+                                    <Font name="Geez Able" size="17.0" />
+                                 </font></TextField>
+                              <Label prefHeight="17.0" prefWidth="221.0" />
+                              <ComboBox fx:id="memberRoleCb" onMouseClicked="#memberRoleCbAction" prefHeight="34.0" prefWidth="300.0" promptText=" " />
+                              <Label prefHeight="17.0" prefWidth="233.0" />
+                              <HBox prefHeight="46.0" prefWidth="212.0">
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="101.0" />
+                                    <Button fx:id="registerAssociationMemberBtn" mnemonicParsing="false" onAction="#registerAssociationMembersAction" prefHeight="45.0" prefWidth="429.0" text="ኣብ መዝገብ ኣቀምጥ">
+                                       <font>
+                                          <Font name="Geez Able" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="memberMegistrationStatusLb" prefHeight="51.0" prefWidth="400.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="registerAssociationMembersFooter" prefHeight="45.0" prefWidth="982.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="550.0" prefWidth="416.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="40.0" />
+            <Button fx:id="registerAssociationMembersBackBtn" mnemonicParsing="false" onAction="#registerAssociationMembersBackBtnAction" prefHeight="25.0" prefWidth="53.0">
+               <font>
+                  <Font name="Geez Able" size="12.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="registerAssociationMembersHeader" prefHeight="215.0" prefWidth="751.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
